@@ -1,0 +1,17 @@
+{
+  "since": {
+    "year": 2021,
+    "month": 8,
+    "day": 1
+  },
+  "until": {
+    "year": 2021,
+    "month": 12,
+    "day": 13
+  },
+  "single_period": 21600,
+  "usernames": [],
+  "all_words": ["granica", "białoruska"],
+  "any_word": [],
+  "all_words_chunk_size": 1
+}

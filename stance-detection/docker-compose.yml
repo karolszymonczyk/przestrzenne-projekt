@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  scraper:
+    image: scraper
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    tty: true
+    command: python ./scraper/scraper.py
+    depends_on:
+      - torproxy
+
+  torproxy:
+    image: dperson/torproxy
+    container_name: torproxy
+    ports:
+      - 9050:9050
+      - 9051:9051
+    environment:
+      - PASSWORD=test1234
+    restart: always
